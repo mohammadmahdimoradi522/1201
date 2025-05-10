@@ -26,23 +26,16 @@ namespace WindowsFormsApp3
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void add_Click(object sender, EventArgs e)
         {
+            this.productTableAdapter.InsertQuery1(Convert.ToInt32(textBox1.Text), textBox2.Text, Convert.ToInt32(textBox3.Text), Convert.ToInt32(textBox4.Text));
+            this.productTableAdapter.Fill(this.dataDataSet.product);
 
         }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void update_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
+            this.productTableAdapter.UpdateQuery(Convert.ToInt32(textBox1.Text), textBox2.Text, Convert.ToInt32(textBox3.Text), Convert.ToInt32(textBox4.Text));
+            this.productTableAdapter.Fill(this.dataDataSet.product);
 
         }
 
@@ -64,34 +57,13 @@ namespace WindowsFormsApp3
 
 
 
-        private void add_Click(object sender, EventArgs e)
-        {
-            this.productTableAdapter.InsertQuery1(Convert.ToInt32(textBox1.Text),textBox2.Text,Convert.ToInt32(textBox3.Text), Convert.ToInt32(textBox4.Text));
-            this.productTableAdapter.Fill(this.dataDataSet.product);
+       
 
-        }
+        
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
+        
 
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void update_Click(object sender, EventArgs e)
-        {
-            this.productTableAdapter.UpdateQuery(Convert.ToInt32(textBox1.Text), textBox2.Text, Convert.ToInt32(textBox3.Text), Convert.ToInt32(textBox4.Text));
-            this.productTableAdapter.Fill(this.dataDataSet.product);
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
+       
         
 
 
@@ -100,15 +72,7 @@ namespace WindowsFormsApp3
             Application.Exit();
         }
 
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
-        {
-
-        }
-
-        private void productBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void search_Click(object sender, EventArgs e)
         {
